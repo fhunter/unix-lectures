@@ -1,6 +1,6 @@
 TEX_FILES=lectures.tex lectures-title.tex lectures-main.tex
 
-all: lectures.pdf
+all: lectures.pdf $(TEX_FILES)
 
 lectures.pdf: lectures.dvi
 	dvipdf lectures.dvi
