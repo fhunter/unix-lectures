@@ -1,4 +1,4 @@
-TEX_FILES=lectures.tex lectures-title.tex lectures-main.tex history.tex ideology.tex shell.tex filesystems.tex networks.tex security.tex ethics.tex system_install.tex remote_access.tex X11.tex administering.tex
+TEX_FILES:= $(wildcard *.tex)
 
 all: lectures.pdf $(TEX_FILES)
 
@@ -8,7 +8,9 @@ lectures.ps: lectures.dvi
 lectures.pdf: lectures.ps
 	ps2pdf $^ $@
 
-lectures.dvi: $(TEX_FILES)
+lectures.dvi: $(TEX_FILES) lectures.bib
+	latex lectures.tex
+	#для обновления оглавления
 	latex lectures.tex
 
 clean:
