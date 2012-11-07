@@ -26,13 +26,16 @@
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
 
 \begin{document}
+
+\bibliography{lectures}
+
 \input{lectures-title}% это титульный лист
 \tableofcontents % это оглавление, которое генерируется автоматически
 \input{history} %история и идеология unix
 \input{ideology} %идеология
 \input{standards} %стандарты
 \input{shell} %shell и все все все
-\input{practice_editors} %редакторы и практика по ним
+\input{editors} %редакторы и практика по ним
 \input{filesystems} %файловые системы
 \input{security} %безопасность и права доступа
 \input{networks} %сети и протоколы
@@ -45,6 +48,7 @@
 \input{authentication_authorisation} %kerberos и все все все
 \input{ethics} %этика сисадмина
 \input{practice} %практикум
+
 %\input{lectures-main} %это основной текст. Его бы разбить по разделам, но это будет не скоро
 
 %1. История (кто, что, с чем едят)
