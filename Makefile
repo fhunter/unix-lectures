@@ -2,8 +2,11 @@ TEX_FILES=lectures.tex lectures-title.tex lectures-main.tex history.tex ideology
 
 all: lectures.pdf $(TEX_FILES)
 
-lectures.pdf: lectures.dvi
-	dvipdf lectures.dvi
+lectures.ps: lectures.dvi
+	dvips lectures.dvi
+
+lectures.pdf: lectures.ps
+	ps2pdf $^ $@
 
 lectures.dvi: $(TEX_FILES)
 	latex lectures.tex
