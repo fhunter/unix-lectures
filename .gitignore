@@ -1,0 +1,7 @@
+*.dvi
+*.aux
+*.log
+*.blg
+*.toc
+lectures.ps
+lectures.pdf
