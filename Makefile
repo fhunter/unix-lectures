@@ -11,7 +11,7 @@ lectures.pdf: lectures.ps
 lectures_booklet.pdf: lectures.pdf
 	pdf2ps $^ -|psbook| psnup -l4 -2 | ps2pdf - $@
 
-lectures.dvi: $(TEX_FILES) lectures.bib
+lectures.dvi: $(TEX_FILES) biblio/lectures.bib
 	latex lectures.tex
 	#для обновления оглавления
 	latex lectures.tex
