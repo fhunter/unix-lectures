@@ -24,10 +24,11 @@
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}.}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\theenumiii}{\arabic{enumiii}}% Меняем везде перечисления на цифра.цифра
 \renewcommand{\labelenumiii}{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.}% Меняем везде перечисления на цифра.цифра
+\bibliographystyle{unsrt}
 
 \begin{document}
 
-\bibliography{lectures}
+\bibliography{biblio/lectures}
 
 \input{lectures-title}% это титульный лист
 \tableofcontents % это оглавление, которое генерируется автоматически
@@ -49,6 +50,7 @@
 \input{authentication_authorisation} %kerberos и все все все
 \input{ethics} %этика сисадмина
 \input{practice} %практикум
+
 
 %\input{lectures-main} %это основной текст. Его бы разбить по разделам, но это будет не скоро
 
